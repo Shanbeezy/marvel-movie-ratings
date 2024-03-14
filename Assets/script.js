@@ -2,50 +2,54 @@
 // one for youtube videos that respond to search, one for youtube videos on load
 // 4 fetches
 
-// var exampleDataReturn = {
-//     title: "Iron Man",
-//     rating: "9.6",
-//     length: "152"
-// }
+// Video Ids: 
+// Iron man 1 : 8ugaeA-nMTc
+// The Incredible Hulk : xbqNb2PFKKA
+// Iron man 2 : wKtcmiifycU 
+// Thor : JOddp-nlNvQ
+// Captain America The First Avenger : JerVrbLldXw
+// The Avengers : eOrNdBpGMv8
+// Iron Man 3 : oYSD2VQagc4
+// Thor The Dark World : npvJ9FTgZbM
+// Captain America The Winter Soldier : tbayiPxkUMM
+// Guardians of the Galaxy : d96cjJhvlMA
+// Avengers Age of Ultron : tmeOjFno6Do
+// Ant-Man : pWdKf3MneyI
+// Captain America Civil War : FkTybqcX-Yo
+// Doctor Strange : h7gvFravm4A
+// Guardians of the Galaxy Vol .2 : dW1BIid8Osg
 
-// fetch("moviedb/marvel/ironman")
-// .then(response => response.json())
-// .then(movieData =>{
-    
-//     console.log(movieData)
-//     console.log(movieData.title, movieData.rating, movieData.length)
-
-//     var movieTitle =  document.createElement("h2")
-//     movieTitle.textContent = movieData.title
 
 
-//     card.append(movieTitle)
-// })
-// Replace 'YOUR_API_KEY' with your actual YouTube Data API key
+
 const apiKey = 'AIzaSyB_Q_N5U2Hnsr2IEO-TbhaG3or0ya7nJao';
-const maxResults = 1; // Number of videos to display
+const videoId = '8ugaeA-nMTc';
 
-async function fetchVideos() {
+async function fetchVideoById() {
     try {
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video&maxResults=${maxResults}&q=cats`);
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${apiKey}&part=snippet`);
         const data = await response.json();
-        renderVideos(data.items);
+        renderVideo(data.items[0]);
     } catch (error) {
-        console.error('Error fetching videos:', error);
+        console.error('Error fetching video:', error);
     }
 }
 
-function renderVideos(videos) {
-    const videosContainer = document.getElementById('videos');
-    videos.forEach(video => {
-        const videoElement = document.createElement('iframe');
-        videoElement.src = `https://www.youtube.com/embed/${video.id.videoId}`;
-        videoElement.width = '560';
-        videoElement.height = '315';
-        videoElement.title = video.snippet.title;
-        videoElement.frameBorder = '0';
-        videosContainer.appendChild(videoElement);
-    });
+function renderVideo(video) {
+    const videoContainer = document.getElementById('video');
+    const videoElement = document.createElement('iframe');
+    videoElement.src = `https://www.youtube.com/embed/${video.id}`;
+    videoElement.width = '560';
+    videoElement.height = '315';
+    videoElement.title = video.snippet.title;
+    videoElement.frameBorder = '0';
+    videoContainer.appendChild(videoElement);
 }
 
-fetchVideos();
+fetchVideoById();
+
+
+
+
+
+
