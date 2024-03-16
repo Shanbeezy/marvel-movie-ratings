@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/uikit.min.css" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+    <script src="Assets/trailers.js"></script>
 
     <title>Marvel Movie Rating</title>
 </head>
@@ -32,28 +33,36 @@
         <h2>The Infinity Saga</h2>
     </section>
 
+    <div id="videos"></div>
+    <div id="video-container">
+        <iframe id="video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
     <!-- Movie thumnails by phases -->
     <section id="Phase1">
         <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/IronMan.png" alt="Iron man 1"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/IronMan.png" alt="Iron man 1">
+                    <button class="video-button" data-video-id="8ugaeA-nMTc">Iron Man</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/incredibleHulk.png"
-                        alt="The Incredible Hulk"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/incredibleHulk.png" alt="The Incredible Hulk">
+                    <button class="video-button" data-video-id="xbqNb2PFKKA">The Incredible Hulk</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/IronMan2.png" alt="Iron man 2"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/IronMan2.png" alt="Iron man 2">
+                    <button class="video-button" data-video-id="wKtcmiifycU">Iron Man 2</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/Thor.png" alt="Thor"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/Thor.png" alt="Thor"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/captainAmericaTheFirstAvenger.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/captainAmericaTheFirstAvenger.png"
                         alt="Captain America: The First Avenger"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/TheAvengers.png" alt="The Avengers">
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/TheAvengers.png" alt="The Avengers">
                 </div>
             </div>
         </div>
@@ -62,27 +71,27 @@
     <section id="Phase2">
         <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"> <img src="image/IronMan3.png" alt="Iron Man 3">
+                <div class="uk-card uk-card-default uk-card-body"> <img src="Assets/image/IronMan3.png" alt="Iron Man 3">
                 </div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/ThorTheDarkWorld.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/ThorTheDarkWorld.png"
                         alt="Thor: The Dark World"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/CaptainAmericaTheWinterSoldier.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainAmericaTheWinterSoldier.png"
                         alt="Captain America: The Winter Soldier"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/GuardiansOftheGalaxy.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/GuardiansOftheGalaxy.png"
                         alt="Guardians of the Galaxy"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/AvengersAgeofUltron.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersAgeofUltron.png"
                         alt="Avengers: Age of Ultron"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/AntMan.png" alt="Ant-Man"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AntMan.png" alt="Ant-Man"></div>
             </div>
         </div>
     </section>
@@ -90,46 +99,46 @@
     <section id="Phase3">
         <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/CaptainAmericaCivilWar.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainAmericaCivilWar.png"
                         alt="Captain America: Civil War"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/DoctorStrange.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/DoctorStrange.png"
                         alt="Doctor Strange"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/GuardiansoftheGalaxyVol2.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/GuardiansoftheGalaxyVol2.png"
                         alt="Guardians of the Galaxy Vol. 2"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/SpiderManHomeComing.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/SpiderManHomeComing.png"
                         alt="Spider-Man: Homecoming"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/ThorRagnarok.png"
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/ThorRagnarok.png"
                         alt="Thor: Ragnarok"></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="image/BlackPanther.png" alt="Black Panther">
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/BlackPanther.png" alt="Black Panther">
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="image/AvengersInfinityWar.png"
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersInfinityWar.png"
                             alt="Avengers: Infinity War"></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="image/AntManandtheWasp.png"
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AntManandtheWasp.png"
                             alt="Ant-Man and the Wasp"></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="image/CaptainMarvel.png"
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainMarvel.png"
                             alt="Captain Marvel"></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="image/AvengersEndgame.png"
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersEndgame.png"
                             alt="Avengers: Endgame"></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="image/SpiderManFarFromHome.png"
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/SpiderManFarFromHome.png"
                             alt="Spider-Man: Far From Home"></div>
                 </div>
             </div>
