@@ -72,6 +72,17 @@ img {
     color: #bfbfbf;
     font-size: 18px;
 }
+
+.video-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 /* 
 nav {
     display: flex;
