@@ -1,3 +1,17 @@
+
+function getApi() {
+    var requestUrl = 'https://www.mediawiki.org/w/api.php';
+    fetch(requestUrl)
+    .then(function (response) {
+      console.log("response", response);
+      return response.json();
+    });
+}
+
+// then(function (data)) {
+//       console.log(data);
+// }
+
 // 4 API calls two for movies and youtube on page load, two for movies and youtube for searching, 
 // one for youtube videos that respond to search, one for youtube videos on load
 // 4 fetches
@@ -60,7 +74,6 @@ const videoIds = ['8ugaeA-nMTc','xbqNb2PFKKA','wKtcmiifycU','JOddp-nlNvQ','JerVr
      });
  });
  
-
 
 
 
