@@ -112,6 +112,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('click', function(event) {
+    const videoContainer = document.getElementById('video-container');
+    const target = event.target;
+
+    // Check if the clicked element is outside of the video container
+    if (!videoContainer.contains(target)) {
+        // Close the video container
+        closeVideoContainer();
+    }
+});
+
+function closeVideoContainer() {
+    const videoContainer = document.getElementById('video-container');
+    videoContainer.innerHTML = ''; // Clear the video content
+    videoContainer.classList.remove('open'); // Hide the video container
+}
+
 
 
 
