@@ -11,6 +11,7 @@
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="Assets/trailers.js"></script>
+    <script src="Assets/ratings.js"></script>
 
     <title>Marvel Movie Rating</title>
 </head>
@@ -44,26 +45,27 @@
         <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
             <div>
                 <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/IronMan.png" alt="Iron man 1">
-                    <button class="video-button" data-video-id="8ugaeA-nMTc">Iron Man</button></div>
+                    <button class="video-button" id="Iron Man" data-video-id="8ugaeA-nMTc">Iron Man</button></div>
             </div>
             <div>
                 <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/incredibleHulk.png" alt="The Incredible Hulk">
-                    <button class="video-button" data-video-id="xbqNb2PFKKA">The Incredible Hulk</button></div>
+                    <button class="video-button" id="The Incredible Hulk" data-video-id="xbqNb2PFKKA">The Incredible Hulk</button></div>
             </div>
             <div>
                 <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/IronMan2.png" alt="Iron man 2">
-                    <button class="video-button" data-video-id="wKtcmiifycU">Iron Man 2</button></div>
+                    <button class="video-button" id="Iron Man 2" data-video-id="wKtcmiifycU">Iron Man 2</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/Thor.png" alt="Thor"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/Thor.png" alt="Thor">
+                    <button class="video-button" id="Thor" data-video-id="JOddp-nlNvQ">Thor</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/captainAmericaTheFirstAvenger.png"
-                        alt="Captain America: The First Avenger"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/captainAmericaTheFirstAvenger.png" alt="Captain America: The First Avenger">
+                    <button class="video-button" id="Captain America: The First Avenger" data-video-id="JerVrbLldXw">Captain America: The First Avenger</button></div>
             </div>
             <div>
                 <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/TheAvengers.png" alt="The Avengers">
-                </div>
+                    <button class="video-button" id="The Avengers" data-video-id="eOrNdBpGMv8">The Avengers</button></div>
             </div>
         </div>
     </section>
@@ -72,26 +74,27 @@
         <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
             <div>
                 <div class="uk-card uk-card-default uk-card-body"> <img src="Assets/image/IronMan3.png" alt="Iron Man 3">
-                </div>
+                    <button class="video-button" id="Iron Man 3" data-video-id="oYSD2VQagc4">Iron Man 3</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/ThorTheDarkWorld.png"
-                        alt="Thor: The Dark World"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/ThorTheDarkWorld.png" alt="Thor: The Dark World">
+                    <button class="video-button" id="Thor: The Dark World" data-video-id="npvJ9FTgZbM">Thor: The Dark World</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainAmericaTheWinterSoldier.png"
-                        alt="Captain America: The Winter Soldier"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainAmericaTheWinterSoldier.png" alt="Captain America: The Winter Soldier">
+                    <button class="video-button" id="Captain America: The Winter Soldier" data-video-id="tbayiPxkUMM">Captain America: The Winter Soldier</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/GuardiansOftheGalaxy.png"
-                        alt="Guardians of the Galaxy"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/GuardiansOftheGalaxy.png" alt="Guardians of the Galaxy">
+                    <button class="video-button" id="Guardians of the Galaxy" data-video-id="d96cjJhvlMA">Guardians of the Galaxy</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersAgeofUltron.png"
-                        alt="Avengers: Age of Ultron"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersAgeofUltron.png" alt="Avengers: Age of Ultron">
+                    <button class="video-button" id="Avengers: Age of Ultron" data-video-id="tmeOjFno6Do">Avengers: Age of Ultron</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AntMan.png" alt="Ant-Man"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AntMan.png" alt="Ant-Man">
+                    <button class="video-button" id="Ant-Man" data-video-id="pWdKf3MneyI">Ant-Man</button></div>
             </div>
         </div>
     </section>
@@ -99,47 +102,47 @@
     <section id="Phase3">
         <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center" uk-grid>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainAmericaCivilWar.png"
-                        alt="Captain America: Civil War"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainAmericaCivilWar.png" alt="Captain America: Civil War">
+                    <button class="video-button" id="Captain America: Civil War" data-video-id="FkTybqcX-Yo">Captain America: Civil War</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/DoctorStrange.png"
-                        alt="Doctor Strange"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/DoctorStrange.png" alt="Doctor Strange">
+                    <button class="video-button" id="Doctor Strange" data-video-id="h7gvFravm4A">Doctor Strange</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/GuardiansoftheGalaxyVol2.png"
-                        alt="Guardians of the Galaxy Vol. 2"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/GuardiansoftheGalaxyVol2.png" alt="Guardians of the Galaxy Vol. 2">
+                    <button class="video-button" id="Guardians of the Galaxy Vol. 2" data-video-id="dW1BIid8Osg">Guardians of the Galaxy Vol. 2</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/SpiderManHomeComing.png"
-                        alt="Spider-Man: Homecoming"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/SpiderManHomeComing.png" alt="Spider-Man: Homecoming">
+                    <button class="video-button" id="Spider-Man: Homecoming" data-video-id="rk-dF1lIbIg">Spider-Man: Homecoming</button></div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/ThorRagnarok.png"
-                        alt="Thor: Ragnarok"></div>
+                <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/ThorRagnarok.png" alt="Thor: Ragnarok">
+                    <button class="video-button" id="Thor: Ragnarok" data-video-id="v7MGUNV8MxU">Thor: Ragnarok</button></div>
             </div>
             <div>
                 <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/BlackPanther.png" alt="Black Panther">
+                    <button class="video-button" id="Black Panther" data-video-id="xjDjIWPwcPU">Black Panther</button></div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersInfinityWar.png" alt="Avengers: Infinity War">
+                        <button class="video-button" id="Avengers: Infinity War" data-video-id="6ZfuNTqbHE8">Avengers: Infinity War</button></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersInfinityWar.png"
-                            alt="Avengers: Infinity War"></div>
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AntManandtheWasp.png" alt="Ant-Man and the Wasp">
+                        <button class="video-button" id="Ant-Man and the Wasp" data-video-id="8_rTIAOohas">Ant-Man and the Wasp</button></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AntManandtheWasp.png"
-                            alt="Ant-Man and the Wasp"></div>
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainMarvel.png" alt="Captain Marvel">
+                        <button class="video-button" id="Captain Marvel" data-video-id="Z1BCujX3pw8">Captain Marvel</button></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/CaptainMarvel.png"
-                            alt="Captain Marvel"></div>
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersEndgame.png" alt="Avengers: Endgame">
+                        <button class="video-button" id="Avengers: Endgame" data-video-id="TcMBFSGVi1c">Avengers: Endgame</button></div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/AvengersEndgame.png"
-                            alt="Avengers: Endgame"></div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/SpiderManFarFromHome.png"
-                            alt="Spider-Man: Far From Home"></div>
+                    <div class="uk-card uk-card-default uk-card-body"><img src="Assets/image/SpiderManFarFromHome.png" alt="Spider-Man: Far From Home">
+                        <button class="video-button" id="Spider-Man: Far From Home" data-video-id="Nt9L1jCKGnE">Spider-Man: Far From Home</button></div>
                 </div>
             </div>
         </div>
