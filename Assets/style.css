@@ -83,6 +83,24 @@ img {
     border-radius: 10px;
 }
 
+.uk-navbar-nav li a {
+    font-size: 24px;
+    color: rgb(248, 248, 251); /* Default color */
+    background-color: #d93025;
+    padding: 5px; /* Default padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Transition for transform, box-shadow, and opacity */
+}
+
+.uk-navbar-nav li a:hover {
+    color: rgb(11, 0, 0); /* Color change on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0px 0px 10px rgba(243, 241, 241, 0.3); /* Box shadow on hover */
+    opacity: 0.8; /* Opacity change on hover */
+}
+
+
+
+
 
 
 /* 
