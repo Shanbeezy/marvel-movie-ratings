@@ -45,12 +45,12 @@ async function fetchVideoById(videoId) {
         console.error('Error fetching video:', error);
     }
 }
-
+// Function to render the videos fetched onto the webpage
 function renderVideo(videoEmbedUrl) {
     const videoContainer = document.getElementById('video-container');
     videoContainer.innerHTML = `<iframe width="560" height="315" src="${videoEmbedUrl}" frameborder="0" allowfullscreen></iframe>`;
 }
-
+// Event listener for when user clicks on each tumbnail to bring up the corresponding trailer
 document.addEventListener('DOMContentLoaded', () => {
     const imgElements = document.querySelectorAll('img#thumbnail');
     imgElements.forEach(img => {
@@ -77,7 +77,7 @@ function closeVideoContainer() {
     videoContainer.innerHTML = ''; // Clear the video content
     videoContainer.classList.remove('open'); // Hide the video container
 }
-
+// Modal function
 Swal.fire({
     position: "top-end",
     icon: "success",
