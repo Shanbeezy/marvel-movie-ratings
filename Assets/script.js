@@ -51,7 +51,7 @@ function renderVideo(videoEmbedUrl) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const imgElements = document.querySelectorAll('img#thumbnail');
+    const imgElements = document.querySelectorAll('img.thumbnail');
     imgElements.forEach(img => {
         img.addEventListener('click', function() {
             const videoId = this.getAttribute('data-video-id');

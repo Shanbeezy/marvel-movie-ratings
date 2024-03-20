@@ -56,12 +56,12 @@ img {
     width: 800px;
 }
 
-#thumbnail {
+.thumbnail {
     height: 380px;
     width: 280px;
 }
 
-#thumbnail:hover {
+.thumbnail:hover {
     border: 4px solid #5A5A5A;
     border-radius: 10px;
     box-shadow: 0 0 20px #d93025;
@@ -83,7 +83,28 @@ img {
     border-radius: 10px;
 }
 
+.uk-position-under .uk-panel {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
 
+.uk-position-under .tooltiptext {
+    visibility: visible;
+    width: 170px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 95%;
+    left: 50%;
+    margin-left: -85px;
+    opacity: 1;
+    transition: opacity .3s;
+}
 
 /* 
 nav {
