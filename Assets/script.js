@@ -30,6 +30,7 @@ const videoIds = ['8ugaeA-nMTc','xbqNb2PFKKA','wKtcmiifycU','JOddp-nlNvQ','JerVr
   'FkTybqcX-Yo','h7gvFravm4A','dW1BIid8Osg','rk-dF1lIbIg','v7MGUNV8MxU','xjDjIWPwcPU','6ZfuNTqbHE8',
   '8_rTIAOohas','Z1BCujX3pw8','TcMBFSGVi1c','Nt9L1jCKGnE']; // Array of video IDs
 
+// Function to fetch youtube trailers using API key 
 async function fetchVideoById(videoId) {
     try {
         const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${apiKey}&part=snippet`);
@@ -44,12 +45,12 @@ async function fetchVideoById(videoId) {
         console.error('Error fetching video:', error);
     }
 }
-
+// Function to render the videos fetched onto the webpage
 function renderVideo(videoEmbedUrl) {
     const videoContainer = document.getElementById('video-container');
     videoContainer.innerHTML = `<iframe width="560" height="315" src="${videoEmbedUrl}" frameborder="0" allowfullscreen></iframe>`;
 }
-
+// Event listener for when user clicks on each tumbnail to bring up the corresponding trailer
 document.addEventListener('DOMContentLoaded', () => {
     const imgElements = document.querySelectorAll('img.thumbnail');
     imgElements.forEach(img => {
@@ -76,9 +77,14 @@ function closeVideoContainer() {
     videoContainer.innerHTML = ''; // Clear the video content
     videoContainer.classList.remove('open'); // Hide the video container
 }
-
-
-
+// Modal function
+Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "You have now entered the Marvel Universe",
+    showConfirmButton: false,
+    timer: 1500
+  });
 
 
 
