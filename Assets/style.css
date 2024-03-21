@@ -83,32 +83,11 @@ img {
     border-radius: 10px;
 }
 
-<<<<<<< HEAD
 .uk-position-under .uk-panel {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
 }
-=======
-.uk-navbar-nav li a {
-    font-size: 24px;
-    color: rgb(248, 248, 251); /* Default color */
-    background-color: #d93025;
-    padding: 5px; /* Default padding */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Transition for transform, box-shadow, and opacity */
-}
-
-.uk-navbar-nav li a:hover {
-    color: rgb(11, 0, 0); /* Color change on hover */
-    transform: scale(1.1); /* Scale effect on hover */
-    box-shadow: 0px 0px 10px rgba(243, 241, 241, 0.3); /* Box shadow on hover */
-    opacity: 0.8; /* Opacity change on hover */
-}
-
-
-
-
->>>>>>> 9b2cd78be5c0319b524f6e5722735d5602c328ce
 
 .uk-position-under .tooltiptext {
     visibility: visible;
@@ -125,4 +104,18 @@ img {
     margin-left: -85px;
     opacity: 1;
     transition: opacity .3s;
+}
+
+.uk-navbar-nav li a {
+    color: rgb(248, 248, 251); /* Default color */
+    font-size: 25px;
+    padding: 5px; /* Default padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Transition for transform, box-shadow, and opacity */
+}
+
+.uk-navbar-nav li a:hover {
+    color: red; /* Color change on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+    opacity: 0.8; /* Opacity change on hover */
 }
