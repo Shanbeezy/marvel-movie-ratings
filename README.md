@@ -22,4 +22,4 @@ We also used uikit for the css framework and SweetAlert2 for the modal
 
 [GitHub](https://github.com/Shanbeezy/marvel-movie-ratings)
 
-[LiveSite]()
+[LiveSite](https://shanbeezy.github.io/marvel-movie-ratings/)
