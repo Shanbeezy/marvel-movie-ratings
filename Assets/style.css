@@ -86,7 +86,7 @@ img {
 .uk-position-under .uk-panel {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px dotted rgb(250, 245, 245);
 }
 
 .uk-position-under .tooltiptext {
@@ -116,6 +116,6 @@ img {
 .uk-navbar-nav li a:hover {
     color: red; /* Color change on hover */
     transform: scale(1.1); /* Scale effect on hover */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+    box-shadow: 0px 0px 10px rgba(245, 242, 242, 0.3); /* Box shadow on hover */
     opacity: 0.8; /* Opacity change on hover */
 }
