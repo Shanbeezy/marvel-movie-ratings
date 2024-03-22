@@ -45,3 +45,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+//This code enhances the user interface by providing immediate, interactive feedback when exploring movie thumbnails, offering a dynamic way to access and display movie ratings without navigating away from the current page.
