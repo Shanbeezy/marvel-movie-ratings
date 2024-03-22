@@ -11,7 +11,7 @@ When user clicks anywhere outside of the video container, the video goes away. T
 They can also "like" favorite movies by clickin the heart icons beside each movie.
 
 ## Tech Used
-For this project we used two APIs Youtube and IMDB for the movie trailers and the ratings for each movie
+For this project we used two APIs Youtube and OMDB for the movie trailers and the ratings for each movie
 We also used uikit for the css framework and SweetAlert2 for the modal
 
 
