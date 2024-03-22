@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <link rel="stylesheet" href="./Assets/style.css" /> -->
+    <!-- awesome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- uikit -->
     <link rel="stylesheet" href="css/uikit.min.css" />
     <script src="js/uikit.min.js"></script>
@@ -14,6 +15,7 @@
 
     <title>Marvel Movie Ratings</title>
 </head>
+<!-- header with phase 1-3 links -->
 
 <body>
     <header>
@@ -30,8 +32,8 @@
     <!-- hero site headers  -->
     <section class="hero-banner"></section>
 
-    <!-- Movie thumnails by phases -->
-    <!-- Phase one movie thumbnails -->
+    <!-- Movie thumbnails by phases -->
+    <!-- Phase one movie thumbnails, trailers and ratings -->
     <section id="Phase1">
         <h2 class="#Phase1"><img src="image/PhaseOneLogo.png" alt="Phase1"></h2>
         <div uk-slider>
@@ -40,54 +42,85 @@
                 <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-6@m uk-grid">
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/IronMan.png" width="400" height="600" alt="Iron man" data-video-id="8ugaeA-nMTc" data-imdb-id="tt0371746">
-                                <div class="uk-position-under uk-panel">
-                                    <h3>Iron Man (2008)</h3>
-                                    <div class="movieRatings"></div>
-                                </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img class="thumbnail" src="image/incredibleHulk.png" width="400" height="600" alt="The Incredible Hulk" data-video-id="xbqNb2PFKKA" data-imdb-id="tt0800080">
+                            <img class="thumbnail" src="image/IronMan.png" width="400" height="600" alt="Iron man"
+                                data-video-id="8ugaeA-nMTc" data-imdb-id="tt0371746">
                             <div class="uk-position-under uk-panel">
-                                <h3>Incredible Hulk (2008)</h3>
+                                <h3>Iron Man (2008)<button data-video-id="8ugaeA-nMTc" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/IronMan2.png" width="400" height="600" alt="Iron man 2" data-video-id="wKtcmiifycU" data-imdb-id="tt1228705">
+                            <img class="thumbnail" src="image/incredibleHulk.png" width="400" height="600"
+                                alt="The Incredible Hulk" data-video-id="xbqNb2PFKKA" data-imdb-id="tt0800080">
                             <div class="uk-position-under uk-panel">
-                                <h3>Iron Man 2 (2010)</h3>
+                                <h3>Incredible Hulk (2008)<button data-video-id="xbqNb2PFKKA" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/Thor.png" width="400" height="600" alt="Thor" data-video-id="JOddp-nlNvQ" data-imdb-id="tt0800369">
+                            <img class="thumbnail" src="image/IronMan2.png" width="400" height="600" alt="Iron man 2"
+                                data-video-id="wKtcmiifycU" data-imdb-id="tt1228705">
                             <div class="uk-position-under uk-panel">
-                                <h3>Thor (2011)</h3>
+                                <h3>Iron Man 2 (2010)<button data-video-id="wKtcmiifycU" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/captainAmericaTheFirstAvenger.png" width="400" height="600" alt="Captain America: The First Avenger" data-video-id="JerVrbLldXw" data-imdb-id="tt0458339">
+                            <img class="thumbnail" src="image/Thor.png" width="400" height="600" alt="Thor"
+                                data-video-id="JOddp-nlNvQ" data-imdb-id="tt0800369">
                             <div class="uk-position-under uk-panel">
-                                <h3>Captain America: The First Avenger (2011)</h3>
+                                <h3>Thor (2011)<button data-video-id="JOddp-nlNvQ" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/TheAvengers.png" width="400" height="600" alt="The Avengers" data-video-id="eOrNdBpGMv8" data-imdb-id="tt0848228">
+                            <img class="thumbnail" src="image/captainAmericaTheFirstAvenger.png" width="400"
+                                height="600" alt="Captain America: The First Avenger" data-video-id="JerVrbLldXw"
+                                data-imdb-id="tt0458339">
                             <div class="uk-position-under uk-panel">
-                                <h3>The Avengers (2012)</h3>
+                                <h3>Captain America: The First Avenger (2011)<button data-video-id="JerVrbLldXw"
+                                        class="like" onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
+                                <div class="movieRatings"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <img class="thumbnail" src="image/TheAvengers.png" width="400" height="600"
+                                alt="The Avengers" data-video-id="eOrNdBpGMv8" data-imdb-id="tt0848228">
+                            <div class="uk-position-under uk-panel">
+                                <h3>The Avengers (2012)<button data-video-id="eOrNdBpGMv8" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -102,7 +135,7 @@
             <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
         </div>
     </section>
-    <!-- Phase two movie thumbnails -->
+    <!-- Phase two movie thumbnails, trailers and ratings -->
 
     <section id="Phase2">
         <h2 class="#Phase2"><img src="image/PhaseTwoLogo.png" alt="Phase2"></h2>
@@ -112,9 +145,14 @@
                 <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-6@m uk-grid">
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/IronMan3.png" width="400" height="600" alt="Iron man 3" data-video-id="oYSD2VQagc4" data-imdb-id="tt1300854">
+                            <img class="thumbnail" src="image/IronMan3.png" width="400" height="600" alt="Iron man 3"
+                                data-video-id="oYSD2VQagc4" data-imdb-id="tt1300854">
                             <div class="uk-position-under uk-panel">
-                                <h3>Iron Man 3 (2013)</h3>
+                                <h3>Iron Man 3 (2013)<button data-video-id="oYSD2VQagc4" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -124,17 +162,26 @@
                             <img class="thumbnail" src="image/ThorTheDarkWorld.png" width="400" height="600"
                                 alt="Thor: The Dark World" data-video-id="npvJ9FTgZbM" data-imdb-id="tt1981115">
                             <div class="uk-position-under uk-panel">
-                                <h3>Thor: The Dark World (2013)</h3>
+                                <h3>Thor: The Dark World (2013)<button data-video-id="npvJ9FTgZbM" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/CaptainAmericaTheWinterSoldier.png" width="400" height="600"
-                                alt="Captain America: The Winter Soldier" data-video-id="tbayiPxkUMM" data-imdb-id="tt1843866">
+                            <img class="thumbnail" src="image/CaptainAmericaTheWinterSoldier.png" width="400"
+                                height="600" alt="Captain America: The Winter Soldier" data-video-id="tbayiPxkUMM"
+                                data-imdb-id="tt1843866">
                             <div class="uk-position-under uk-panel">
-                                <h3>Captain America: The Winter Soldier (2014)</h3>
+                                <h3>Captain America: The Winter Soldier (2014)<button data-video-id="tbayiPxkUMM"
+                                        class="like" onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -144,7 +191,11 @@
                             <img class="thumbnail" src="image/GuardiansOftheGalaxy.png" width="400" height="600"
                                 alt="Guardians Of the Galaxy" data-video-id="d96cjJhvlMA" data-imdb-id="tt2015381">
                             <div class="uk-position-under uk-panel">
-                                <h3>Guardians Of the Galaxy (2014)</h3>
+                                <h3>Guardians Of the Galaxy (2014)<button data-video-id="d96cjJhvlMA" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -154,16 +205,25 @@
                             <img class="thumbnail" src="image/AvengersAgeofUltron.png" width="400" height="600"
                                 alt="Avengers: Age of Ultron" data-video-id="tmeOjFno6Do" data-imdb-id="tt2395427">
                             <div class="uk-position-under uk-panel">
-                                <h3>Avengers: Age of Ultron(2015)</h3>
+                                <h3>Avengers: Age of Ultron(2015)<button data-video-id="tmeOjFno6Do" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/AntMan.png" width="400" height="600" alt="Ant-Man" data-video-id="pWdKf3MneyI" data-imdb-id="tt0478970">
+                            <img class="thumbnail" src="image/AntMan.png" width="400" height="600" alt="Ant-Man"
+                                data-video-id="pWdKf3MneyI" data-imdb-id="tt0478970">
                             <div class="uk-position-under uk-panel">
-                                <h3>Ant-Man (2015)</h3>
+                                <h3>Ant-Man (2015)<button data-video-id="pWdKf3MneyI" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -178,7 +238,7 @@
             <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
         </div>
     </section>
-    <!-- Phase three movie thumbnails -->
+    <!-- Phase three movie thumbnails, trailers and ratings -->
 
     <section id="Phase3">
         <h2 class="#Phase3"><img src="image/PhaseThreeLogo.png" alt="Phase3"></h2>
@@ -187,9 +247,14 @@
                 <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-6@m uk-grid">
                     <li>
                         <div class="uk-panel">
-                            <img class="thumbnail" src="image/CaptainAmericaCivilWar.png" width="400" height="600" alt="Captain America: Civil War" data-video-id="FkTybqcX-Yo" data-imdb-id="tt3498820">
+                            <img class="thumbnail" src="image/CaptainAmericaCivilWar.png" width="400" height="600"
+                                alt="Captain America: Civil War" data-video-id="FkTybqcX-Yo" data-imdb-id="tt3498820">
                             <div class="uk-position-under uk-panel">
-                                <h3>Captain America: Civil War (2016)</h3>
+                                <h3>Captain America: Civil War (2016)<button data-video-id="FkTybqcX-Yo" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -199,7 +264,11 @@
                             <img class="thumbnail" src="image/DoctorStrange.png" width="400" height="600"
                                 alt="Doctor Strange" data-video-id="h7gvFravm4A" data-imdb-id="tt1211837">
                             <div class="uk-position-under uk-panel">
-                                <h3>Doctor Strange (2016)</h3>
+                                <h3>Doctor Strange (2016)<button data-video-id="h7gvFravm4A" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -207,9 +276,14 @@
                     <li>
                         <div class="uk-panel">
                             <img class="thumbnail" src="image/GuardiansoftheGalaxyVol2.png" width="400" height="600"
-                                alt="Guardians of the Galaxy Vol. 2" data-video-id="dW1BIid8Osg" data-imdb-id="tt3896198">
+                                alt="Guardians of the Galaxy Vol. 2" data-video-id="dW1BIid8Osg"
+                                data-imdb-id="tt3896198">
                             <div class="uk-position-under uk-panel">
-                                <h3>Guardians of the Galaxy Vol. 2 (2017)</h3>
+                                <h3>Guardians of the Galaxy Vol. 2 (2017)<button data-video-id="dW1BIid8Osg"
+                                        class="like" onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -219,7 +293,11 @@
                             <img class="thumbnail" src="image/SpiderManHomeComing.png" width="400" height="600"
                                 alt="Spider-Man: HomeComing" data-video-id="rk-dF1lIbIg" data-imdb-id="tt2250912">
                             <div class="uk-position-under uk-panel">
-                                <h3>Spider-Man: Homecoming (2017)</h3>
+                                <h3>Spider-Man: Homecoming (2017)<button data-video-id="rk-dF1lIbIg" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -229,7 +307,11 @@
                             <img class="thumbnail" src="image/ThorRagnarok.png" width="400" height="600"
                                 alt="Thor: Ragnarok" data-video-id="v7MGUNV8MxU" data-imdb-id="tt3501632">
                             <div class="uk-position-under uk-panel">
-                                <h3>Thor: Ragnarok (2017)</h3>
+                                <h3>Thor: Ragnarok (2017)<button data-video-id="v7MGUNV8MxU" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -239,7 +321,11 @@
                             <img class="thumbnail" src="image/BlackPanther.png" width="400" height="600"
                                 alt="Black Panther" data-video-id="xjDjIWPwcPU" data-imdb-id="tt1825683">
                             <div class="uk-position-under uk-panel">
-                                <h3>Black Panther (2018)</h3>
+                                <h3>Black Panther (2018)<button data-video-id="xjDjIWPwcPU" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -249,7 +335,11 @@
                             <img class="thumbnail" src="image/AvengersInfinityWar.png" width="400" height="600"
                                 alt="Avenger: Infinity War" data-video-id="6ZfuNTqbHE8" data-imdb-id="tt4154756">
                             <div class="uk-position-under uk-panel">
-                                <h3>Avengers: Infinity War (2018)</h3>
+                                <h3>Avengers: Infinity War (2018)<button data-video-id="6ZfuNTqbHE8" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -259,7 +349,11 @@
                             <img class="thumbnail" src="image/AntManandtheWasp.png" width="400" height="600"
                                 alt="Ant-Man and the Wasp" data-video-id="8_rTIAOohas" data-imdb-id="tt10954600">
                             <div class="uk-position-under uk-panel">
-                                <h3>Ant-Man and the Wasp (2018)</h3>
+                                <h3>Ant-Man and the Wasp (2018)<button data-video-id="8_rTIAOohas" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -269,7 +363,11 @@
                             <img class="thumbnail" src="image/CaptainMarvel.png" width="400" height="600"
                                 alt="Captain Marvel" data-video-id="Z1BCujX3pw8" data-imdb-id="tt4154664">
                             <div class="uk-position-under uk-panel">
-                                <h3>Captain Marvel (2019)</h3>
+                                <h3>Captain Marvel (2019)<button data-video-id="Z1BCujX3pw8" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -279,7 +377,11 @@
                             <img class="thumbnail" src="image/AvengersEndgame.png" width="400" height="600"
                                 alt="Avengers: Endgame" data-video-id="TcMBFSGVi1c" data-imdb-id="tt4154796">
                             <div class="uk-position-under uk-panel">
-                                <h3>Avengers: Endgame (2019)</h3>
+                                <h3>Avengers: Endgame (2019)<button data-video-id="TcMBFSGVi1c" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -289,7 +391,11 @@
                             <img class="thumbnail" src="image/SpiderManFarFromHome.png" width="400" height="600"
                                 alt="Spider-Man: Far From Home" data-video-id="Nt9L1jCKGnE" data-imdb-id="tt6320628">
                             <div class="uk-position-under uk-panel">
-                                <h3>Spider-Man: Far From Home (2019)</h3>
+                                <h3>Spider-Man: Far From Home (2019)<button data-video-id="t9L1jCKGnE" class="like"
+                                        onclick="toggleLike(this)">
+                                        <i class="icon fa-regular fa-heart blank">
+                                        </i>
+                                    </button></h3>
                                 <div class="movieRatings"></div>
                             </div>
                         </div>
@@ -304,20 +410,20 @@
             <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
         </div>
     </section>
-  
-  <!-- Container for video trailers to pop up on view port -->
+
+    <!-- Container for video trailers to pop up on view port -->
     <div id="videos"></div>
     <div class="video-container" id="video-container">
         <iframe id="video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
     </div>
-    
-    
-<!-- Links to script.js, the Youtube iframe and website used for modal -->
+
+
+    <!-- Links to script.js, the Youtube iframe and website used for modal -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./Assets/script.js"></script>
     <script src="./Assets/ratings.js"></script>
-  
-  </body>
+
+</body>
 
 </html>

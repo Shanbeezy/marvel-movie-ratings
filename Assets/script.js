@@ -86,5 +86,39 @@ Swal.fire({
     timer: 1500
   });
 
+// Function to toggle like button and add to localStorage by videoID & dateStamp
+function toggleLike(button) {
+
+    let videoId = button.getAttribute('data-video-id'); // grab that attr from the bbtn
+    let key = `liked-${videoId}`;
+    console.log(videoId)
+    var isLiked = localStorage.getItem(key);
+
+      if (isLiked) {
+          localStorage.removeItem(key);
+          button.classList.remove('liked');
+      } else {
+        localStorage.setItem(key, Date.now());
+        button.classList.add('liked');
+      }
+  }
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    let buttons = document.querySelectorAll('.like');
+
+        // loop buttons
+        for (let i = 0; i < buttons.length; i++) {
+            let button = buttons[i];
+            let videoId = button.getAttribute('data-video-id'); // grab that attr from the bbtn
+            let key = `liked-${videoId}`;
+            var isLiked = localStorage.getItem(key);
+            console.log(isLiked);
+
+        if (isLiked) {
+        button.classList.add('liked');
+        } 
+    }
+});
 
 
