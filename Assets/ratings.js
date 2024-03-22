@@ -1,20 +1,21 @@
+// The entire script waits for the page's content to fully load before executing, ensuring all elements it needs to enteract with are available.
 document.addEventListener("DOMContentLoaded", function() {
     var imageElements = document.querySelectorAll('.thumbnail');
 
     imageElements.forEach(function(imageElement) {
         var movieRatings = imageElement.nextElementSibling.querySelector('.movieRatings');
 
-        imageElement.addEventListener('mouseover', function() {
+        imageElement.addEventListener('mouseover', function() { // listens for mouse over to fetch the movie ratings based on the movies IMDb ID and then displays them in the element "movieRatings"
             var imdbId = imageElement.getAttribute('data-imdb-id');
             fetchMovieRatingsById(imdbId, movieRatings);
         });
 
-        imageElement.addEventListener('mouseout', function() {
+        imageElement.addEventListener('mouseout', function() { // when the user moves the mouse away from the thumbnailit clears the displayed ratings
             movieRatings.innerHTML = "";
         });
     });
 
-    function fetchMovieRatingsById(imdbId, ratingsElement) {
+    function fetchMovieRatingsById(imdbId, ratingsElement) { // takes the imdb ID and a dom element to display the ratings. It constructs the URL to query the OMDb  api using the imdb ID and an API key.
         const apiKey = "b293b774";
         const url = `https://www.omdbapi.com/?i=${encodeURIComponent(imdbId)}&apikey=${apiKey}`;
 
